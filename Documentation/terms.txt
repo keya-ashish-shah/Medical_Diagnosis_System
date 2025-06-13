@@ -1,0 +1,87 @@
+heart 
+SLIDER
+0: Typical Angina
+Chest pain that occurs during physical exertion or stress.
+
+Caused by reduced blood flow to the heart (ischemia).
+
+Predictable and relieved by rest or nitroglycerin.
+
+Strong indicator of coronary artery disease (CAD).
+
+1: Atypical Angina
+Chest discomfort that doesn’t match the classic angina pattern.
+
+Might not always occur with exertion.
+
+Still may be related to heart disease but less clearly than typical angina.
+
+2: Non-Anginal Pain
+Chest pain that is not related to heart ischemia.
+
+Could be due to muscle strain, acid reflux, anxiety, etc.
+
+Less likely to be heart-related.
+
+3: Asymptomatic
+No chest pain or discomfort at all.
+
+The person may have heart disease without any noticeable symptoms.
+
+Sometimes called silent ischemia — can be dangerous because it goes unnoticed.
+
+Resting Blood Pressure
+Resting Blood Pressure (RBP) refers to the blood pressure measured when a person is at rest, typically sitting quietly for a few minutes.
+
+
+🔹 Glucose – The Fuel
+Glucose is sugar in your blood, and it's your body’s main source of energy.
+
+ Insulin – The Regulator
+Insulin is a hormone made by your pancreas.
+
+It acts like a key: it unlocks your cells so glucose can enter and be used for energy.
+
+Without insulin, glucose stays in the blood instead of entering cells.
+
+
+Glucose	70–100 mg/dL
+Insulin	2–20 µIU/mL (lab-dependent)
+
+
+
+
+THYROID
+TSH (Thyroid Stimulating Hormone)
+High TSH → Often means thyroid is underactive (hypothyroidism) → TSH rises to stimulate more T3/T4.
+
+Low TSH → Often means thyroid is overactive (hyperthyroidism) → TSH drops because T3/T4 levels are already high.
+
+
+pcod
+LH (Luteinizing Hormone) in PCOD/PCOS — Explained
+Ratio	Interpretation
+~1:1	Normal in healthy women
+> 2:1 or 3:1	Common in PCOS — suggests hormonal imbalance
+
+
+anxiety
+The GAD-7 (Generalized Anxiety Disorder-7) is a self-reported screening tool used to assess the severity of anxiety.
+
+A 7-question questionnaire.
+
+Each question relates to anxiety symptoms over the past 2 weeks.
+
+Scored from 0 to 3 per question:
+
+0 = Not at all
+
+1 = Several days
+
+2 = More than half the days
+
+3 = Nearly every day
+
+
+
+Thalach = Maximum Heart Rate Achieved . It represents the highest heart rate a patient reached during a stress test (often a treadmill exercise test).

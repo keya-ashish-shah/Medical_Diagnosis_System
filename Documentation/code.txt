@@ -1,0 +1,183 @@
+age = ctrl.Antecedent(
+    np.arange(df['age'].min(), df['age'].max() + 1, 1),  # Universe of discourse
+    'age'                                                # Variable name
+)
+df['age'].min() – the minimum age in your dataset.
+
+df['age'].max() – the maximum age in your dataset.
+
++ 1 – ensures the max value is included (since np.arange is exclusive at the end).
+
+1 – the step size, meaning values go in steps of 1.
+
+'age' – the name of the fuzzy variable.
+
+
+
+
+
+
+
+
+heart_risk = ctrl.Consequent(np.arange(0, 101, 1), 'heart_risk')
+comes from the scikit-fuzzy library in Python and defines a fuzzy output variable.
+
+🔍 Detailed Breakdown:
+ctrl.Consequent(...): This creates a fuzzy output variable, used as the result of fuzzy logic rules. In this case, it represents the risk of heart disease.
+
+np.arange(0, 101, 1):
+
+Creates the universe of discourse: all possible values for heart risk, from 0 to 100 inclusive, in steps of 1.
+
+This allows you to assign fuzzy labels like "low", "medium", or "high" risk over this range.
+
+'heart_risk': This is just the name of the output variable, used for labeling and plotting.
+
+
+
+
+
+
+
+
+
+age.automf(3)    is a shortcut in scikit-fuzzy to automatically create fuzzy membership functions for an input variable — in this case, age.
+
+A fuzzy membership function is a mathematical function used in fuzzy logic to represent how much a given input belongs to a fuzzy set — not just 0 or 1 like in classical logic, but a value between 0 and 1.
+
+🧠 Key Concept:
+In classical logic, something is either in a set or not:
+
+Is someone "old"? → Yes or No.
+
+In fuzzy logic, you can say:
+
+Someone is 0.8 "old", 0.4 "middle-aged", etc.
+
+That "degree of belonging" is calculated using a membership function.
+
+
+
+
+
+
+
+
+
+1. heart_ctrl = ctrl.ControlSystem(rules)
+Purpose: This line creates a fuzzy control system that uses a set of rules to determine how the input variables relate to the output variable.
+
+ctrl.ControlSystem(rules):
+
+ControlSystem() is a class from the skfuzzy library.
+
+It takes in a list of fuzzy rules (e.g., rules in this case), which define how the inputs and outputs are related based on fuzzy logic.
+
+The rules are typically defined using the ctrl.Rule() class and form the "heart" of the fuzzy logic system.
+
+
+
+
+
+
+
+
+
+2. return ctrl.ControlSystemSimulation(heart_ctrl)
+Purpose: This line creates a simulation object for the fuzzy control system, allowing you to run the fuzzy logic simulation based on the heart_ctrl system you just created.
+
+ctrl.ControlSystemSimulation(heart_ctrl):
+
+ControlSystemSimulation is a class from scikit-fuzzy that takes a control system (created in the previous line, here named heart_ctrl) and lets you simulate its behavior.
+
+The simulation object allows you to input values, compute fuzzy outputs, and examine the system's response.
+
+
+
+
+
+
+You've hit on a crucial distinction in how fuzzy logic control systems are handled in libraries like scikit-fuzzy. Let's break down the difference between ctrl.ControlSystem and ctrl.ControlSystemSimulation:
+
+ctrl.ControlSystem: The Blueprint
+
+Think of ctrl.ControlSystem as the definition or the blueprint of your fuzzy logic controller.
+
+It's where you assemble all the essential components:
+
+Fuzzy Variables: You define the input and output variables for your system (e.g., heart_rate, blood_pressure, medication_level) and their associated fuzzy sets (e.g., low, medium, high for each variable).
+Fuzzy Rules: You specify the logical rules that govern the behavior of your system, linking the fuzzy sets of the input variables to the fuzzy sets of the output variables (the "IF...THEN..." statements).
+The Overall Structure: The ControlSystem object holds these variables and rules together in a structured way, defining the complete logic of your fuzzy controller.
+Analogy: Imagine a recipe. The recipe lists the ingredients and the steps to follow. The ctrl.ControlSystem is like the written recipe.
+
+Key Characteristics:
+
+It's a static definition. Once created with a set of rules, the fundamental logic it embodies doesn't change unless you explicitly modify the ControlSystem object itself.
+It doesn't process any actual input data. It's just the set of instructions.
+You create it once (or when the control logic needs to be redefined).
+ctrl.ControlSystemSimulation: The Execution Engine
+
+ctrl.ControlSystemSimulation, on the other hand, is the engine that takes your ctrl.ControlSystem blueprint and executes it with actual input data.
+
+It's the object you use to feed in crisp (non-fuzzy) input values and get a crisp (non-fuzzy) output value based on the fuzzy logic defined in the ControlSystem.
+
+Key Steps in the Simulation:
+
+Fuzzification: When you provide crisp inputs to the ControlSystemSimulation object, it uses the membership functions defined in the ControlSystem to determine the degree to which these inputs belong to each of the input fuzzy sets.
+Rule Evaluation: It then evaluates each of the rules in the ControlSystem. For each rule, it determines the "firing strength" based on the truth values of the antecedents (the "IF" part of the rule).
+Implication: The firing strength of each rule is then applied to the consequent (the "THEN" part of the rule), shaping the output fuzzy sets.
+Aggregation: The resulting output fuzzy sets from all the fired rules are combined into a single output fuzzy set.
+Defuzzification: Finally, this aggregated fuzzy output set is converted back into a single, crisp output value using a defuzzification method (e.g., centroid, weighted average).
+Analogy: Using the recipe analogy, the ctrl.ControlSystemSimulation is like a chef following the recipe. You provide the ingredients (crisp inputs), and the chef (simulation) follows the instructions (fuzzy rules) to produce the final dish (crisp output).
+
+Key Characteristics:
+
+It's dynamic. You can feed it different input values multiple times to see the corresponding outputs.
+It relies on an existing ctrl.ControlSystem object to know the rules and fuzzy sets.
+You typically create a ControlSystemSimulation object based on a ControlSystem whenever you want to apply the control logic to specific scenarios.
+In essence:
+
+ControlSystem is the what (the definition of the fuzzy logic controller).
+ControlSystemSimulation is the how (the process of applying that defined logic to actual data).
+
+
+
+
+good = ochu risk 
+average = 50% risk
+poor = vadhare risk
+
+
+
+menu_icon="cast":
+
+This specifies the icon that will appear on the top of the menu itself. In this case, "cast" is used, which likely represents a media or broadcast icon.
+
+default_index=0:
+
+This sets the default selected menu item when the app is first loaded. In this case, the first option (index 0, which is "Home") will be selected by default when the app starts.
+
+sim je che te controlsimpulationsystem no object che 
+
+
+
+
+
+st.markdown(warning_html, unsafe_allow_html=True)
+is from Streamlit, and it's used to display custom HTML content (in this case, warning_html) in your web app.
+
+🔍 Breakdown:
+✅ st.markdown(...):
+This is a Streamlit function that normally displays Markdown-formatted text.
+
+But with a special option, it can also render raw HTML.
+
+✅ warning_html:
+This is the HTML string you've built earlier.
+
+It likely contains <div>, <span>, and inline CSS styles (like red warning text in a box).
+
+✅ unsafe_allow_html=True:
+This tells Streamlit:
+
+"Allow and render raw HTML tags in the text, even though HTML can be unsafe if it comes from an untrusted source."
